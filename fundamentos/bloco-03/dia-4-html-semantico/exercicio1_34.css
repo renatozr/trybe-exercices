@@ -1,3 +1,24 @@
+body {
+    margin: 0px;
+}
+
 table, th, td {
     border: 1px solid black;
+}
+
+aside {
+    position: absolute;
+    background-color: aqua;
+    padding: 10px;
+    top: 580px;
+    left: 220px;
+}
+
+header {
+    text-align: center;
+    background-color: aqua;
+}
+
+.nav {
+    padding: 20px;
 }
