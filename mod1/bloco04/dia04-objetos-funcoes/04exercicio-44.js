@@ -1,15 +1,14 @@
-function indexLowerValue(array) {
+function mostCharactersNames(array) {
 
-    let lowerValue = array[0];
+    let mostName = array[0];
 
     for (let i of array) {
 
-        if (i < lowerValue) {
-
-            lowerValue = i;
+        if (i.length > mostName.length) {
+            mostName = i;
         }
     }
-    return array.indexOf(lowerValue);
+    return mostName;
 }
 
-console.log(indexLowerValue([2, 4, 6, 7, 10, 0, -3]));
+console.log(mostCharactersNames(['José', 'Lucas', 'Nádia', 'Fernanda', 'Cairo', 'Joana']));

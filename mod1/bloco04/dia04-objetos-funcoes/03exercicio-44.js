@@ -1,15 +1,15 @@
-function indexHighValue(array) {
+function indexLowerValue(array) {
 
-  let highValue = array[0];
+    let lowerValue = array[0];
 
-  for (let i of array) {
+    for (let i of array) {
 
-      if (i > highValue) {
+        if (i < lowerValue) {
 
-          highValue = i;
-      }
-  }
-  return array.indexOf(highValue);
+            lowerValue = i;
+        }
+    }
+    return array.indexOf(lowerValue);
 }
 
-console.log(indexHighValue([2, 3, 6, 7, 10, 1]));
+console.log(indexLowerValue([2, 4, 6, 7, 10, 0, -3]));

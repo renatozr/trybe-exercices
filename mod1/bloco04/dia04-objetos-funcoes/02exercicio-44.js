@@ -1,10 +1,15 @@
-function verificaPalindrome(palavra) {
-    let palavraInversa = palavra.split('').reverse().join('');
-    let ePalindrome = false;
-    if (palavra === palavraInversa) {
-        ePalindrome = true;
-    }
-    return ePalindrome;
+function indexHighValue(array) {
+
+  let highValue = array[0];
+
+  for (let i of array) {
+
+      if (i > highValue) {
+
+          highValue = i;
+      }
+  }
+  return array.indexOf(highValue);
 }
 
-console.log(verificaPalindrome('subinoonibus'));
+console.log(indexHighValue([2, 3, 6, 7, 10, 1]));
