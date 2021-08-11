@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Exercício 5.2</title>
+    <style>
+      section {
+        border-color: black;
+        border-style: solid;
+      }
+
+      .title {
+        text-align: center;
+      }
+
+      .main-content {
+        background-color: yellow;
+      }
+
+      .main-content .center-content {
+        background-color: red;
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .main-content .center-content p {
+        font-style: italic;
+      }
+
+      .main-content .left-content {
+        background-color: green;
+        width: 60%;
+        margin-left: 0;
+        margin-right: auto;
+      }
+
+      .main-content .left-content .small-image {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 100%;
+      }
+
+      .main-content .right-content {
+        background-color: blue;
+        width: 60%;
+        margin-left: auto;
+        margin-right: 0;
+      }
+
+      .main-content .description {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      let tagH1 = document.createElement('h1');
+      tagH1.innerText = 'Exercício 5.2 - JavaScript DOM';
+      document.getElementsByTagName('body')[0].appendChild(tagH1);
+
+      let tagMain = document.createElement('main');
+      tagMain.className = 'main-content';
+      document.body.appendChild(tagMain);
+
+      let tagSection = document.createElement('section');
+      tagSection.className = 'center-content';
+      document.getElementsByClassName('main-content')[0].appendChild(tagSection);
+
+      let tagP = document.createElement('p');
+      tagP.innerHTML = 'algum texto';
+      document.querySelector('.center-content').appendChild(tagP);
+
+      let tagSection2 = document.createElement('section');
+      tagSection2.className = 'left-content';
+      document.getElementsByClassName('main-content')[0].appendChild(tagSection2);
+
+      let tagSection3 = document.createElement('section');
+      tagSection3.className = 'right-content';
+      document.getElementsByClassName('main-content')[0].appendChild(tagSection3);
+
+      let img = document.createElement('img');
+      img.src = 'https://picsum.photos/200';
+      img.className = 'small-image';
+      document.querySelector('.left-content').appendChild(img);
+
+      let ul = document.createElement('ul');
+      let numerosExt = ['um', 'dois', 'três', 'quatro', 'cinco', 'seis', 'sete', 'oito', 'nove', 'dez'];
+      for (let i = 0; i < numerosExt.length; i += 1) {
+        let li = document.createElement('li');
+        li.innerHTML = numerosExt[i];
+        ul.appendChild(li);
+      }
+      tagSection3.appendChild(ul);
+
+      for (let i = 0; i < 3; i += 1) {
+        let h3 = document.createElement('h3');
+        document.querySelector('.main-content').appendChild(h3);
+      }
+
+
+      tagH1.className = 'title';
+
+      for (let i = 0; i < 3; i += 1) {
+        let elementsH3 = document.querySelectorAll('.main-content h3')[i];
+        elementsH3.className = 'description';
+      }
+
+      tagMain.removeChild(tagSection2);
+      // ou tagSection2.remove();
+
+      tagSection3.style.marginRight = 'auto';
+
+      tagSection.style.backgroundColor = 'green';
+
+      ul.removeChild(ul.lastElementChild);
+      ul.removeChild(ul.lastElementChild);
+      // ou
+      // document.querySelectorAll('.right-content ul li')[9].remove();
+      // document.querySelectorAll('.right-content ul li')[8].remove();
+      // ou
+      // document.getElementsByTagName('li')[9].remove()
+      // document.getElementsByTagName('li')[8].remove()
+    </script>
+  </body>
+</html>
