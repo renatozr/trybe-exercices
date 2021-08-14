@@ -51,3 +51,29 @@ function createButtonFeriados(string) {
 
 createButtonFeriados('Feriados');
 
+
+const holidayDays = document.getElementsByClassName('holiday');
+
+function btnFeriadosClick() {
+  let control = 0;
+  const buttonFeriados = document.getElementById('btn-holiday');
+  buttonFeriados.addEventListener('click', function(){
+
+    for (let holidayDay of holidayDays) {
+
+      holidayDay.style.backgroundColor = 'lightGreen';
+      if (control === 1) {
+        holidayDay.style.backgroundColor = 'rgb(238,238,238)';
+      }
+    }
+    if (control === 0) {
+      control += 1;
+    } else {
+      control -= 1;
+    }
+  })
+}
+
+btnFeriadosClick();
+
+
