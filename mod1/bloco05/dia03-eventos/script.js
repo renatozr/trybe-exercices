@@ -77,3 +77,37 @@ function btnFeriadosClick() {
 btnFeriadosClick();
 
 
+function createButtonSexta(string) {
+  const buttonSexta = document.createElement('button');
+  buttonSexta.innerText = string;
+  buttonSexta.id = 'btn-friday';
+
+  divButtonsContainer.appendChild(buttonSexta);
+}
+
+createButtonSexta('Sexta-feira');
+
+
+const fridayDays = document.getElementsByClassName('friday');
+
+function btnSextaClick() {
+  let control = 0;
+  const buttonSexta = document.getElementById('btn-friday');
+  buttonSexta.addEventListener('click', function(){
+
+    for (let fridayDay of fridayDays) {
+
+      fridayDay.style.color = 'red';
+      if (control === 1) {
+        fridayDay.style.color = '#777';
+      }
+    }
+    if (control === 0) {
+      control += 1;
+    } else {
+      control -= 1;
+    }
+  })
+}
+
+btnSextaClick();
