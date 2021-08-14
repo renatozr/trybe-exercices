@@ -190,3 +190,18 @@ function paintDays() {
 paintDays();
 
 
+const inputComp = document.getElementById('task-input');
+const buttonAddComp = document.getElementById('btn-add');
+const taskList = document.querySelector('.task-list');
+
+function addComp() {
+  if (inputComp.value === '') {
+    window.alert('Erro: Nenhum compromisso inserido')
+  } else {
+    const li = document.createElement('li');
+    li.innerText = inputComp.value;
+    taskList.appendChild(li);
+  }
+}
+
+buttonAddComp.addEventListener('click', addComp);
