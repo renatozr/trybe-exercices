@@ -111,3 +111,44 @@ function btnSextaClick() {
 }
 
 btnSextaClick();
+
+
+const days = document.getElementsByClassName('day');
+
+function zoomDays() {
+  for (let day of days) {
+    day.addEventListener('mouseover', function(event){
+      event.target.style.fontSize = '35px';
+    })
+    day.addEventListener('mouseout', function(event){
+      event.target.style.fontSize = '20px';
+    })
+  }
+}
+
+zoomDays();
+
+
+const myTasks = document.querySelector('.my-tasks');
+
+function addTask(tarefa) {
+  const taskText = document.createElement('span');
+  taskText.innerText = tarefa;
+
+  myTasks.appendChild(taskText);
+}
+
+addTask('Estudar');
+
+
+function colorDiv(cor) {
+  const divTask = document.createElement('div');
+  divTask.className = 'task';
+  divTask.style.backgroundColor = cor;
+
+  myTasks.appendChild(divTask);
+}
+
+colorDiv('lightGreen');
+
+
