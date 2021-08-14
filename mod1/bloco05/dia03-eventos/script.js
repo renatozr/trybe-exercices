@@ -61,7 +61,7 @@ function btnFeriadosClick() {
 
     for (let holidayDay of holidayDays) {
 
-      holidayDay.style.backgroundColor = 'lightGreen';
+      holidayDay.style.backgroundColor = 'orange';
       if (control === 1) {
         holidayDay.style.backgroundColor = 'rgb(238,238,238)';
       }
@@ -118,7 +118,7 @@ const days = document.getElementsByClassName('day');
 function zoomDays() {
   for (let day of days) {
     day.addEventListener('mouseover', function(event){
-      event.target.style.fontSize = '35px';
+      event.target.style.fontSize = '30px';
     })
     day.addEventListener('mouseout', function(event){
       event.target.style.fontSize = '20px';
@@ -150,5 +150,43 @@ function colorDiv(cor) {
 }
 
 colorDiv('lightGreen');
+
+
+const divsTask = document.getElementsByClassName('task');
+
+function selectDiv() {
+  for (let div of divsTask) {
+
+    div.addEventListener('click', function(event){
+      const selec = event.target;
+      
+      if (selec.className == 'task selected'){
+        selec.className = 'task'
+      } else {
+        selec.className = 'task selected';
+      }
+    })
+  }
+}
+
+selectDiv();
+
+
+function paintDays() {
+  for (let day of days) {
+    day.addEventListener('click', function(event){
+      const eventStyle = event.target.style;
+      const selectedDivColor = document.querySelector('.selected').style.backgroundColor;
+      
+      if (eventStyle.color === selectedDivColor) {
+        eventStyle.color = 'rgb(119,119,119)';
+      } else {
+        eventStyle.color = selectedDivColor;
+      }
+    })
+  }
+}
+
+paintDays();
 
 
