@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercício 5.4</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Leitor de conteúdo escrito</h1>
+  <label for="cor-de-fundo">Cor de fundo:</label>
+  <div>
+  <input type="text"
+    id="cor-de-fundo"
+    placeholder="Escreva uma cor em inglês"
+  >
+  <button id="btn-bkg-cl">Adicionar</button> <br />
+  </div>
+
+  <label for="cor-do-texto">Cor do texto:</label>
+  <div>
+  <input type="text"
+    id="cor-do-texto"
+    placeholder="Escreva uma cor em inglês"
+  >
+  <button id="btn-txt-cl">Adicionar</button> <br />
+  </div>
+
+  <label for="tamanho-da-fonte">Tamanho da fonte:</label>
+  <div>
+  <input type="number"
+    id="tamanho-da-fonte"
+    placeholder="Escreva um número"
+  >
+  <button id="btn-font-size">Adicionar</button> <br />
+  </div>
+
+  <label for="espacamento-linhas">Espaçamento entre as linhas do texto:</label>
+  <div>
+  <input type="number"
+    id="espacamento-linhas"
+    placeholder="Escreva um número"
+  >
+  <button id="btn-lines-height">Adicionar</button> <br />
+  </div>
+
+  <label for="tipo-da-fonte">Tipo da fonte:</label>
+  <div>
+  <input type="text"
+    id="tipo-da-fonte"
+    placeholder="Escreva um tipo de fonte"
+  >
+  <button id="btn-font-type">Adicionar</button> <br />
+  </div>
+
+  <textarea
+  id="texto"
+  placeholder="Escreva seu texto aqui"
+  ></textarea>
+
+  <div id="texto-impresso"></div>
+  <script src="script.js"></script>
+</body>
+</html>
