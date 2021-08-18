@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  
+  <form>
+    <fieldset>
+      <label for="input-nome">Nome:
+        <input type="text" name="nome" id="input-nome" required maxlength="40">
+      </label>
+      <br>
+      <label for="input-email">E-mail:
+        <input type="text" name="email" id="input-email" required maxlength="50">
+      </label>
+      <br>
+      <label for="input-cpf"> CPF:
+        <input type="text" name="cpf" id="input-cpf" required maxlength="11">
+      </label>
+      <br>
+      <label for="input-endereco">Endereço: <br>
+        <textarea type="text" name="endereco" id="input-endereco" required maxlength="200"></textarea>
+      </label>
+      <br>
+      <label for="input-cidade">Cidade:
+        <input type="text" name="cidade" id="input-cidade" required maxlength="28">
+      </label>
+      <br>
+      <label for="select-estado">Estado:
+        <select name="estado" id="select-estado" required>
+        </select>
+      </label>
+    </fieldset>
+  </form>
+
+  <script src="script.js"></script>
+</body>
+</html>
