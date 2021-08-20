@@ -14,13 +14,13 @@
   }
 })();
 
-function addDataError() {
-  const dadosDoForm = document.querySelector('#dados-do-form');
+// function addDataError() {
+//   const dadosDoForm = document.querySelector('#dados-do-form');
 
-  const erro = document.createElement('h3');
-  erro.innerHTML = 'Dados Inválidos';
-  dadosDoForm.appendChild(erro);
-}
+//   const erro = document.createElement('h3');
+//   erro.innerHTML = 'Dados Inválidos';
+//   dadosDoForm.appendChild(erro);
+// }
 
 function addDataForm() {
   const dadosDoForm = document.getElementById('dados-do-form');
@@ -45,36 +45,36 @@ function addDataForm() {
   }
 }
 
-function verifyDateFormat(event) {
-  event.preventDefault();
-  const inputDataInicio = document.querySelector('#input-data-inicio');
-  const stringData = inputDataInicio.value;
+// function verifyDateFormat(event) {
+//   event.preventDefault();
+//   const inputDataInicio = document.querySelector('#input-data-inicio');
+//   const stringData = inputDataInicio.value;
   
-  const dateFormat = stringData[2] === '/' && stringData[5] === '/' && stringData.length === 10;
-  const dayFormat = parseInt(stringData.slice(0, 2)) > 0 && parseInt(stringData.slice(0, 2)) <= 31;
-  const monthFormat = parseInt(stringData.slice(3, 5)) > 0 && parseInt(stringData.slice(3, 5)) <= 12;
-  const yearFormat = parseInt(stringData.slice(6, 9)) >= 0;
+//   const dateFormat = stringData[2] === '/' && stringData[5] === '/' && stringData.length === 10;
+//   const dayFormat = parseInt(stringData.slice(0, 2)) > 0 && parseInt(stringData.slice(0, 2)) <= 31;
+//   const monthFormat = parseInt(stringData.slice(3, 5)) > 0 && parseInt(stringData.slice(3, 5)) <= 12;
+//   const yearFormat = parseInt(stringData.slice(6, 9)) >= 0;
 
-  if (!dateFormat) {
-    window.alert('Erro: Formato da data de início deve ser dd/mm/aaaa.');
-  }
-  if (!dayFormat) {
-    window.alert('Erro: O dia da data de início deve estar entre 0 e 31.');
-  }
-  if (!monthFormat) {
-    window.alert('Erro: O mes da data de início deve estar entre 0 e 12.');
-  }
-  if (!yearFormat) {
-    window.alert('Erro: O ano da data de início deve ser positivo.');
-  }
-  if (dateFormat && dayFormat && monthFormat && yearFormat) {
-    addDataForm();
-  } else {
-    addDataError();
-  }
-}
+//   if (!dateFormat) {
+//     window.alert('Erro: Formato da data de início deve ser dd/mm/aaaa.');
+//   }
+//   if (!dayFormat) {
+//     window.alert('Erro: O dia da data de início deve estar entre 0 e 31.');
+//   }
+//   if (!monthFormat) {
+//     window.alert('Erro: O mes da data de início deve estar entre 0 e 12.');
+//   }
+//   if (!yearFormat) {
+//     window.alert('Erro: O ano da data de início deve ser positivo.');
+//   }
+//   if (dateFormat && dayFormat && monthFormat && yearFormat) {
+//     addDataForm();
+//   } else {
+//     addDataError();
+//   }
+// }
 const btnEnviar = document.querySelector('#btn-enviar');
-btnEnviar.addEventListener('click', verifyDateFormat);
+btnEnviar.addEventListener('click', addDataForm);
 
 function clearDataForm() {
   const dadosDoForm = document.getElementById('dados-do-form');
