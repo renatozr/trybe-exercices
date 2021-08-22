@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulário de Currículo</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  
+  <form class="">
+
+    <legend>Dados pessoais</legend>
+    <div class="mb-3">
+      <label for="input-nome" class="form-label">Nome:</label>
+      <input class="dado form-control" type="text" name="nome" id="input-nome" required maxlength="40">
+    </div>
+    <div class="mb-3">
+      <label for="input-email" class="form-label">E-mail:</label>
+      <input class="dado form-control" type="text" name="email" id="input-email" required maxlength="50">
+    </div>
+
+    <div class="mb-3">
+      <label for="input-cpf" class="form-label"> CPF:</label>
+      <input class="dado form-control" type="text" name="cpf" id="input-cpf" required maxlength="11">
+    </div>
+
+    <div class="mb-3">
+      <label for="input-endereco" class="form-label">Endereço:</label> <br>
+      <textarea class="dado form-control" type="text" name="endereco" id="input-endereco" required maxlength="200"></textarea>
+    </div>
+
+    <div class="mb-3">
+      <label for="input-cidade" class="form-label">Cidade:</label>
+      <input class="dado form-control" type="text" name="cidade" id="input-cidade" required maxlength="28">
+    </div>
+
+    <div class="mb-3">
+      <label for="select-estado" class="form-label">Estado:</label>
+      <select class="dado form-select" name="estado" id="select-estado" required>
+      </select>
+    </div>
+
+    <div class="form-check form-check-inline">
+      <input class="dado form-check-input" type="radio" id="input-casa" name="moradia" value="casa" checked>
+      <label for="input-casa" class="form-check-label">Casa</label>
+    </div>
+    <div class="form-check form-check-inline">
+      <input class="dado form-check-input" type="radio" id="input-apt" name="moradia" value="apartamento">
+      <label for="input-apt" class="form-check-label">Apartamento</label>
+    </div>
+
+    <br>  
+
+    <legend>Dados do seu último emprego</legend>
+    <div class="mb-3">
+      <p>Resumo do seu currículo:</p>
+      <textarea class="dado form-control" name="curriculo" id="textarea-curriculo" maxlength="1000" required cols="50" rows="10"></textarea>
+    </div>
+
+    <div class="mb-3">
+      <label for="input-cargo" class="form-label">Cargo:</label>
+      <input class="dado form-control" type="text" name="cargo" id="input-cargo" required maxlength="40">
+    </div>
+
+    <div class="mb-3">
+      <label for="input-desc-cargo" class="form-label">Descrição do cargo:</label>
+      <input class="dado form-control" type="text" name="desc-cargo" id="input-desc-cargo" required maxlength="500">
+    </div>
+
+    <div class="mb-3">
+      <label for="datepicker" class="form-label">Data de início:</label>
+      <input class="dado form-control" type="date" name="data-inicio" id="datepicker" required>
+    </div>
+
+  <div class="">
+    <button type="submit" id="btn-enviar" class="button btn btn-primary">Enviar</button>
+    <button type="reset" id="btn-limpar" class="button btn btn-secondary">Limpar</button>
+  </div>
+
+  </form>
+
+  <div id="dados-do-form">
+    <h2>Dados do Formulário</h2>
+  </div>
+
+  <script src="script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+</body>
+</html>

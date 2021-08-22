@@ -1,0 +1,20 @@
+body {
+  padding: 10px;
+}
+
+input {
+  margin: 4px;
+}
+
+/* .button {
+  margin-top: 10px;
+  margin-left: 5px;
+  width: 100px;
+  height: 30px;
+} */
+
+#dados-do-form {
+  margin-top: 25px;
+  border: 1px solid black;
+  padding: 50px;
+}
