@@ -6,7 +6,7 @@ h1 {
   font-size: 35px;
 }
 h2 {
-
+  font-size: 32px;
 }
 
 img {
@@ -14,5 +14,33 @@ img {
 }
 
 figure {
-    margin: 40px;
+    margin-bottom: 40px;
+}
+
+/* width 615px breakpoint */
+@media screen and (min-width: 615px) {
+  body {
+    background-color: rgb(221, 221, 221);
+    font-size: 25px;
+    margin: 30px;
+  }
+  figure {
+    display: inline-block;
+    width: 35%;
+  }
+  figure img {
+    width: auto;
+  }
+  
+}
+
+/* width 1350px brackpoint */
+@media screen and (min-width: 1350px) {
+  body {
+    background-color: rgb(146, 146, 146);
+    font-size: 30px;
+    margin: 25px;
+    max-width: 1410px;
+  }
+
 }
