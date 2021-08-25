@@ -5,8 +5,48 @@ html {
   box-sizing: inherit;
 }
 
+body {
+  margin: 10px;
+  color: rgb(41, 41, 41);
+}
+
+#home {
+  text-align: center;
+  font-weight: bold;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+}
+
+a {
+  cursor: pointer;
+  text-decoration: none;
+  font-weight: bold;
+  font-family: sans-serif;
+  color: rgb(41, 41, 41);
+}
+
 @media screen and (max-width: 600px) {
-  
+  body {
+    margin: 20px;
+  }
+  nav li {
+    border: 1px solid rgb(41, 41, 41);
+    flex-grow: 1;
+    padding: 8px 0;
+    text-align: center;
+    background-color: rgb(167, 167, 167);
+  }
+  nav li:active {
+    background-color: rgb(129, 129, 129);
+  }
+
+  .main-content h1 {
+    font-size: 25px;
+  }
 }
 
 @media screen and (min-width: 601px) and (max-width: 1300px) {
@@ -14,5 +54,5 @@ html {
 }
 
 @media screen and (min-width: 1301px) {
-  
+
 }
