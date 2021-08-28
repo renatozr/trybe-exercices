@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercicio4 Bloco 7.1</title>
+</head>
+<body>
+  <p id="counter">0</p>
+  <button id="btn">Click</button>
+  <script>
+    let clickCount = 0;
+    const btn = document.getElementById('btn');
+    btn.addEventListener('click', (event) => {
+      clickCount += 1;
+      const counter = document.getElementById('counter');
+      counter.innerHTML = clickCount;
+      event.target.style.color = 'blue';
+    });
+  </script>
+</body>
+</html>
