@@ -45,3 +45,30 @@ const ls3Assign = {
 const allLessons = Object.assign({}, ls1Assign, ls2Assign, ls3Assign);
 console.log(allLessons);
 
+const totalStudents = allLessons => {
+  let result = 0;
+  for (let lesson in allLessons) {
+    result += allLessons[lesson]['numeroEstudantes'];
+  }
+  return result;
+}
+console.log(totalStudents(allLessons));
+
+const getValueByNumber = (lesson, number) => {
+  const lessonKeys = Object.keys(lesson);
+  return lesson[lessonKeys[number]];
+}
+console.log(getValueByNumber(lesson1, 0));
+
+const verifyPair = (lesson, key, value) => {
+  const lessonEntries = Object.entries(lesson);
+
+  for (let entry of lessonEntries) {
+    if (entry.includes(key) && entry.includes(value)) {
+      return true;
+    }
+  }
+  return false;
+}
+console.log(verifyPair(lesson3, 'turno', 'noite'));
+console.log(verifyPair(lesson3, 'materia', 'Maria Clara'));
