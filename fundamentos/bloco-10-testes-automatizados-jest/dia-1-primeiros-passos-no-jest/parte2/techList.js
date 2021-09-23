@@ -6,4 +6,4 @@ function techList(arrTech, name) {
   return arrTech.sort().map((tech) => ({ tech, name }));
 }
 
-module.exports = techList;
+module.exports = { techList };

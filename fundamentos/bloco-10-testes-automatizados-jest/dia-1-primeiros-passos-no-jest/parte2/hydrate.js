@@ -4,4 +4,4 @@ function hydrate(string) {
   return `${totalDrinks} copo${s} de água`;
 }
 
-module.exports = hydrate;
+module.exports = { hydrate };
