@@ -22,15 +22,15 @@ test('testar chamada e retorno padrão de valor 10 da função multiplicar', () 
 
 // 3 - Faça o mock da função somar e implemente uma função que recebe dois valores e retorna sua soma. 
 // Teste a chamada, o retorno e os parâmetros passados.
-// test('testar chamada, retorno e parâmetros passados da função somar', async () => {
-//   const mockSomar = jest.spyOn(math, 'somar');
+test('testar chamada, retorno e parâmetros passados da função somar', async () => {
+  const mockSomar = jest.spyOn(math, 'somar');
 
-//   mockSomar(2, 3);
-//   expect(mockSomar).toHaveBeenCalled();
-//   expect(mockSomar).toHaveBeenCalledTimes(1);
-//   expect(mockSomar).toHaveBeenCalledWith(2, 3);
-//   await expect(mockSomar(2, 3)).resolves.toBe(5);
-// });
+  mockSomar(2, 3);
+  expect(mockSomar).toHaveBeenCalled();
+  expect(mockSomar).toHaveBeenCalledTimes(1);
+  expect(mockSomar).toHaveBeenCalledWith(2, 3);
+  await expect(mockSomar(2, 3)).resolves.toBe(5);
+});
 
 // 4 - Faça o mock da função dividir e implemente um retorno padrão com o valor ‘15’. Implemente também os seguintes valores 
 // para a primeira e segunda chamadas: ‘2’ e ‘5’. Teste a chamada, o retorno, os parâmetros e quantas vezes a função foi chamada.
