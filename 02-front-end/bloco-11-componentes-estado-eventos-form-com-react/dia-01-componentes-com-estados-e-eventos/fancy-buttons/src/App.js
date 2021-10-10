@@ -12,38 +12,56 @@ class App extends React.Component {
     }
 
     this.handleClick = this.handleClick.bind(this);
-    this.addOneClick1 = this.addOneClick1.bind(this);
-    this.addOneClick2 = this.addOneClick2.bind(this);
-    this.addOneClick3 = this.addOneClick3.bind(this);
+    // this.resetCount = this.resetCount.bind(this);
+    // this.addOneClick1 = this.addOneClick1.bind(this);
+    // this.addOneClick2 = this.addOneClick2.bind(this);
+    // this.addOneClick3 = this.addOneClick3.bind(this);
   }
 
-  handleClick(event) {
-    console.log('Clicou!');
-    this[event.target.name]();
+  changeBtnColor(btn) {
+    const numOfClicks = btn.innerText[btn.innerText.length - 1];
+    if (numOfClicks % 2 === 0) {
+      btn.style.color = 'lightgreen';
+      console.log('Verde');
+    } else {
+      btn.style.color = 'black';
+      console.log('Preto');
+    }
   }
 
-  addOneClick1() {
+  addOneClick1(btn) {
     this.setState((prevState) => ({
       numOfClicks1: 1 + prevState.numOfClicks1
-    }));
+    }), () => { this.changeBtnColor(btn) });
   }
-  addOneClick2() {
+  addOneClick2(btn) {
     this.setState((prevState) => ({
       numOfClicks2: 1 + prevState.numOfClicks2
-    }));
+    }), () => { this.changeBtnColor(btn) });
   }
-  addOneClick3() {
+  addOneClick3(btn) {
     this.setState((prevState) => ({
       numOfClicks3: 1 + prevState.numOfClicks3
-    }));
+    }), () => { this.changeBtnColor(btn) });
   }
 
-  resetCount() {
+  resetCount(btn) {
     this.setState({
       numOfClicks1: 0,
       numOfClicks2: 0,
       numOfClicks3: 0
-    })
+    }, () => {
+      const countBtns = btn.parentElement.childNodes;
+      countBtns.forEach(btn => {
+        this.changeBtnColor(btn);
+      });
+    });
+  }
+
+  handleClick(event) {
+    console.log('Clicou!');
+    const btn = event.target;
+    this[btn.name](btn);
   }
   
   render() {
