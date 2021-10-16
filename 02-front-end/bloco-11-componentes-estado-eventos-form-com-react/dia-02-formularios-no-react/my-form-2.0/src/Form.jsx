@@ -36,6 +36,8 @@ const INITIAL_STATE = {
     'Sergipe',
     'Tocantins',
   ],
+  casa: false,
+  apart: false,
 };
 
 class Form extends React.Component {
@@ -81,6 +83,8 @@ class Form extends React.Component {
       cidade,
       estado,
       estados,
+      casa,
+      apart,
     } = this.state;
     return (
       <form>
@@ -144,16 +148,41 @@ class Form extends React.Component {
               estados.map((estado) => <option key={ estado } value={ estado }>{ estado }</option>)
             }
           </select>
-          <label htmlFor="tipoInput">Tipo: </label>
-          <input
-            // type="radio"
-            // name="tipo"
-            // value={ tipo }
-            // onChange={ this.handleChange }
-            // id="tipoInput"
-            // required
-          />
+          <label htmlFor="casaInput">
+            <input
+              type="radio"
+              name="casa"
+              value={ casa }
+              onChange={ this.handleChange }
+              id="casaInput"
+            />
+            Casa
+          </label>
+          <label htmlFor="apartInput">
+            <input
+              type="radio"
+              name="apart"
+              value={ apart }
+              onChange={ this.handleChange }
+              id="apartInput"
+            />
+            Apartamento
+          </label>
         </fieldset>
+        <fieldset>
+          <legend>Dados do último emprego</legend>
+          <label>
+            <textarea />
+          </label>
+          <label>
+            <textarea />
+          </label>
+          <label>
+            <input />
+          </label>
+        </fieldset>
+        <button></button>
+        <button></button>
       </form>
     );
   }
