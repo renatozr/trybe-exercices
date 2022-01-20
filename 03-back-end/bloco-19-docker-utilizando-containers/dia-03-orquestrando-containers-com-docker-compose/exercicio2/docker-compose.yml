@@ -1,0 +1,6 @@
+version: '3'
+services:
+  site-exercicio2:
+    image: ghost:1-alpine
+    ports:
+      - 2368:2368
