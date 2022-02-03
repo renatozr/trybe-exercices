@@ -76,7 +76,7 @@ Contém todas as atividades desenvolvidas por __[mim](https://www.linkedin.com/i
 - [x] 10a.3 - Jest - Simulando comportamentos
 - [x] 10a.4 - Projeto - Jest Assíncrono e Mocking
 
-## Desenvolvimento Front-end :hourglass_flowing_sand:
+## Desenvolvimento Front-end :heavy_check_mark:
 
 ##### Bloco 10b: Introdução à React
 - [x] 10b.1 - Introdução - Front-end
@@ -91,55 +91,55 @@ Contém todas as atividades desenvolvidas por __[mim](https://www.linkedin.com/i
 - [ ] 11.3 - Projeto - Tryunfo
 
 ##### Bloco 12: Ciclo de Vida de Componentes e React Router
-- [ ] 12.1 - Ciclo de vida de componentes
-- [ ] 12.2 - React Router
-- [ ] 12.3 - Projeto - TrybeTunes
+- [x] 12.1 - Ciclo de vida de componentes
+- [x] 12.2 - React Router
+- [x] 12.3 - Projeto - TrybeTunes
 
 ##### Bloco 13: Metodologias Ágeis
-- [ ] 13.1 - Metodologias Ágeis
-- [ ] 13.2 - Projeto - Frontend Online Store
+- [x] 13.1 - Metodologias Ágeis
+- [x] 13.2 - Projeto - Frontend Online Store
 
 ##### Bloco 14: Testes automatizados com React Testing Library
-- [ ] 14.1 - RTL - Primeiros passos
-- [ ] 14.2 - RTL - Mocks e Inputs
-- [ ] 14.3 - RTL - Testando React Router
-- [ ] 14.4 - Projeto - Testes em React
+- [x] 14.1 - RTL - Primeiros passos
+- [x] 14.2 - RTL - Mocks e Inputs
+- [x] 14.3 - RTL - Testando React Router
+- [x] 14.4 - Projeto - Testes em React
 
 ##### Bloco 15: Gerenciamento de estado com Redux
-- [ ] 15.1 - Introdução ao Redux - O estado global da aplicação
-- [ ] 15.2 - Usando o Redux no React
-- [ ] 15.3 - Usando o Redux no React - Prática
-- [ ] 15.4 - Usando o Redux no React - Actions Assíncronas
-- [ ] 15.5 - Testes síncronos com React-Redux
-- [ ] 15.6 - Projeto - Tabela com filtros de dados
+- [x] 15.1 - Introdução ao Redux - O estado global da aplicação
+- [x] 15.2 - Usando o Redux no React
+- [x] 15.3 - Usando o Redux no React - Prática
+- [x] 15.4 - Usando o Redux no React - Actions Assíncronas
+- [x] 15.5 - Testes síncronos com React-Redux
+- [x] 15.6 - Projeto - Tabela com filtros de dados
 
 ##### Bloco 16: Projeto Jogo de Trivia
-- [ ] 16.1 - Projeto - Jogo de Trivia
+- [x] 16.1 - Projeto - Jogo de Trivia
 
 ##### Bloco 17: Context API e React Hooks
-- [ ] 17.1 - Context API do React
-- [ ] 17.2 - React Hooks - useState e useContext
-- [ ] 17.3 - React Hooks - useEffect e Hooks customizados
-- [ ] 17.4 - Projeto - StarWars Datatable com Context API e Hooks
+- [x] 17.1 - Context API do React
+- [x] 17.2 - React Hooks - useState e useContext
+- [x] 17.3 - React Hooks - useEffect e Hooks customizados
+- [x] 17.4 - Projeto - StarWars Datatable com Context API e Hooks
 
 ##### Bloco 18: Projeto App de Receitas
-- [ ] 18.1 - Projeto - App de Receitas
+- [x] 18.1 - Projeto - App de Receitas
 
 ## Desenvolvimento Back-end :hourglass_flowing_sand:
 
 ##### Bloco 19: Introdução à SQL
-- [ ] 19.1 - Introdução - Back-end
-- [ ] 19.1 - Introdução - Bancos de dados relacionais
-- [ ] 19.1 - Banco de dados SQL
-- [ ] 19.2 - Encontrando dados em um banco de dados
-- [ ] 19.3 - Filtrando dados de forma específica
-- [ ] 19.4 - Manipulando tabelas
-- [ ] 19.5 - Projeto - All For One
+- [x] 19.1 - Introdução - Back-end
+- [x] 19.1 - Introdução - Bancos de dados relacionais
+- [x] 19.1 - Banco de dados SQL
+- [x] 19.2 - Encontrando dados em um banco de dados
+- [x] 19.3 - Filtrando dados de forma específica
+- [x] 19.4 - Manipulando tabelas
+- [x] 19.5 - Projeto - All For One
 
 ##### Bloco 20: Funções SQL, Joins e Subqueries
-- [ ] 20.1 - Funções mais usadas no SQL
-- [ ] 20.2 - Descomplicando JOINs e UNIONs
-- [ ] 20.3 - Stored Routines & Subqueries
+- [x] 20.1 - Funções mais usadas no SQL
+- [x] 20.2 - Descomplicando JOINs e UNIONs
+- [x] 20.3 - Stored Routines & Subqueries
 - [ ] 20.4 - Projeto - Vocabulary Booster
 
 ##### Bloco 21: Normalização e Modelagem de Banco de Dados
