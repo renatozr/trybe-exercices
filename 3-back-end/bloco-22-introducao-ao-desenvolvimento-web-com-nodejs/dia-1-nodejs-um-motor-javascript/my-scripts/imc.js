@@ -1,6 +1,6 @@
 const { questionFloat } = require('readline-sync');
 
-const weight = questionFloat('Qual seu peso em quilogramas?\n');
+const weight = questionFloat('\nQual seu peso em quilogramas?\n');
 const height = questionFloat('Qual sua altura em metros?\n');
 
 const imc = (weight / height ** 2).toFixed(2);
@@ -24,4 +24,4 @@ const situation = (imc) => {
   return 'Obesidade graus III e IV';
 };
 
-console.log(`\nSeu imc é ${imc}. Está na categoria: ${situation(imc)}.`);
+console.log(`\nSeu IMC é ${imc}. Está na categoria: ${situation(imc)}.`);
