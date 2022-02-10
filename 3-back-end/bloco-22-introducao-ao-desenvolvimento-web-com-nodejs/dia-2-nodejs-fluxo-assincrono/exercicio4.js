@@ -1,7 +1,7 @@
 const fs = require('fs').promises;
 
 const getSimpsonsData = async () => {
-  const jsonData = await fs.readFile('simpsons.json', 'utf8');
+  const jsonData = await fs.readFile('./ex4files/simpsons.json', 'utf8');
 
   const data = JSON.parse(jsonData);
 
@@ -40,7 +40,7 @@ const removeChar6And10 = async () => {
 
     const newDataJson = JSON.stringify(newData);
 
-    fs.writeFile('simpsons.json', newDataJson);
+    fs.writeFile('./ex4files/simpsons.json', newDataJson);
   } catch (err) {
     console.log(err);
   }
@@ -54,14 +54,14 @@ const createSimpsonFamilyJson = async () => {
 
     const newDataJson = JSON.stringify(newData);
 
-    fs.writeFile('simpsonFamily.json', newDataJson);
+    fs.writeFile('./ex4files/simpsonFamily.json', newDataJson);
   } catch (err) {
     console.log(err);
   }
 }
 
 const getSimpsonFamilyData = async () => {
-  const jsonData = await fs.readFile('simpsonFamily.json', 'utf8');
+  const jsonData = await fs.readFile('./ex4files/simpsonFamily.json', 'utf8');
 
   const data = JSON.parse(jsonData);
 
@@ -79,7 +79,7 @@ const addNelsonToFamily = async () => {
 
     const newDataJson = JSON.stringify(newData);
 
-    fs.writeFile('simpsonFamily.json', newDataJson);
+    fs.writeFile('./ex4files/simpsonFamily.json', newDataJson);
   } catch (err) {
     console.log(err);
   }
@@ -96,7 +96,7 @@ const replaceNelsonWithMaggie = async () => {
 
     const newDataJson = JSON.stringify(newData);
 
-    fs.writeFile('simpsonFamily.json', newDataJson);
+    fs.writeFile('./ex4files/simpsonFamily.json', newDataJson);
   } catch (err) {
     console.log(err);
   }
