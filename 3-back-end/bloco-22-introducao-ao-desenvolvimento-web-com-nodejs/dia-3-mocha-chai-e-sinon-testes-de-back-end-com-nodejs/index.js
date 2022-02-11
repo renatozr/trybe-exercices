@@ -1,3 +1,5 @@
+const fs = require('fs').promises;
+
 const verifyNumber = (num) => {
   if (typeof num !== 'number') return 'o valor deve ser um número';
 
@@ -6,4 +8,14 @@ const verifyNumber = (num) => {
   if (num == 0) return 'neutro';
 };
 
-module.exports = verifyNumber;
+const writeContentInFile = async (fileName, content) => {
+  try {
+    await fs.writeFile(fileName, content);
+    
+    return 'ok';
+  } catch (err) {
+    console.error(err);
+  }
+};
+
+module.exports = { verifyNumber, writeContentInFile };
