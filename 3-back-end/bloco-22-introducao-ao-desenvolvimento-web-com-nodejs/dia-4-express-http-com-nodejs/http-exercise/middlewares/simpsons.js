@@ -18,7 +18,7 @@ const getById = async (req, res, next) => {
 
     const selectedSimpson = simpsons.find((s) => s.id === id);
 
-    if (!selectedSimpson) res.status(404).json({ message: 'simpson not found' });
+    if (!selectedSimpson) return res.status(404).json({ message: 'simpson not found' });
 
     res.status(200).json(selectedSimpson);
   } catch (err) {
@@ -34,7 +34,7 @@ const addNew = async (req, res, next) => {
   
     const isIdAlreadyExists = simpsons.some((s) => s.id === id);
 
-    if (isIdAlreadyExists) res.status(409).json({ message: 'id already exists' });
+    if (isIdAlreadyExists) return res.status(409).json({ message: 'id already exists' });
 
     const newSimpsons = [...simpsons, { id, name }];
 

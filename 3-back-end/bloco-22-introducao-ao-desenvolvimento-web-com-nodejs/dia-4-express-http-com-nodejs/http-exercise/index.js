@@ -1,26 +1,32 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 
-const getPing = require('./middlewares/getPing');
-const postHello = require('./middlewares/postHello');
-const postGreetings = require('./middlewares/postGreetings');
-const putUsers = require('./middlewares/putUsers');
+const ping = require('./middlewares/ping');
+const hello = require('./middlewares/hello');
+const greetings = require('./middlewares/greetings');
+const users = require('./middlewares/users');
 const simpsons = require('./middlewares/simpsons');
 const notFound = require('./middlewares/notFound');
 const error = require('./middlewares/error');
+const auth = require('./middlewares/auth');
+const signup = require('./middlewares/signup');
 
 const PORT = 3000;
 const app = express();
 
 app.use(bodyParser.json());
 
-app.get('/ping', getPing);
+app.post('/signup', signup);
 
-app.post('/hello', postHello);
+app.use(auth);
 
-app.post('/greetings', postGreetings);
+app.get('/ping', ping);
 
-app.put('/users/:name/:age', putUsers);
+app.post('/hello', hello);
+
+app.post('/greetings', greetings);
+
+app.put('/users/:name/:age', users);
 
 app.get('/simpsons', simpsons.getAll);
 
