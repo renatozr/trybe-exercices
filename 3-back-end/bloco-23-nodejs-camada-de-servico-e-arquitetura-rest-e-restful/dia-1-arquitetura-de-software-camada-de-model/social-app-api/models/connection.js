@@ -1,8 +1,8 @@
 const mysql = require('mysql2/promise');
 
 const connection = mysql.createPool({
-  user: 'renatozr',
-  password: 'bella321',
+  user: process.env.MYSQL_USER,
+  password: process.env.MYSQL_PASSWORD,
   host: 'localhost',
   database: 'social_app',
 });
