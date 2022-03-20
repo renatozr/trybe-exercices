@@ -26,9 +26,7 @@ const update = async (req, res) => {
   const { id } = req.params;
   const { name, brand } = req.body;
 
-  await ProductsModel.update(id, name, brand);
-
-  const updatedProduct = { id, name, brand };
+  const updatedProduct = await ProductsModel.update(id, name, brand);
 
   res.status(200).json({ updatedProduct });
 };
