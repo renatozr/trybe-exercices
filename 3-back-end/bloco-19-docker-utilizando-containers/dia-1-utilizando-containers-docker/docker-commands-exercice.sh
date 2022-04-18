@@ -11,3 +11,5 @@ docker container ls -a
 docker container attach aade
 
 docker container rm aade
+
+docker container run -it --rm andrius/ascii-patrol
