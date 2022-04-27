@@ -7,6 +7,9 @@ router.route('/')
   .get(bookController.findAll)
   .post(bookController.create);
 
+router.route('/search')
+  .get(bookController.findByAuthor);
+
 router.route('/:id')
   .get(bookController.findById)
   .put(bookController.update)
