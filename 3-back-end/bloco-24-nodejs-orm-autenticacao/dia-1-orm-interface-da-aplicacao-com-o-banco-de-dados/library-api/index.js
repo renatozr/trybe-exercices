@@ -1,7 +1,7 @@
 require('dotenv').config();
 const express = require('express');
 const bodyParser = require('body-parser');
-const bookRouter = require('./routers/book');
+const bookRouter = require('./src/routers/book');
 
 const app = express();
 const PORT = process.env.PORT || 3000;

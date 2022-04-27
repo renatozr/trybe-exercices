@@ -4,7 +4,7 @@ const findAll = async (_req, res) => {
   try {
     const books = await Book.findAll({ order: [
       ['title', 'ASC'],
-      ['createdAt', 'DESC']
+      ['createdAt', 'ASC']
     ]});
 
     return res.status(200).json(books);

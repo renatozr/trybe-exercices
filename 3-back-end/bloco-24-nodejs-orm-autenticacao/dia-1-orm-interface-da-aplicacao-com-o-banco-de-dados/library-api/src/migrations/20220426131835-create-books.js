@@ -18,15 +18,18 @@ module.exports = {
         type: Sequelize.STRING
       },
       pageQuantity: {
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
+        field: 'page_quantity'
       },
       updatedAt: {
         allowNull: false,
-        type: Sequelize.DATE
+        type: Sequelize.DATE,
+        field: 'updated_at'
       },
       createdAt: {
         allowNull: false,
-        type: Sequelize.DATE
+        type: Sequelize.DATE,
+        field: 'created_at'
       }
     });
   },
