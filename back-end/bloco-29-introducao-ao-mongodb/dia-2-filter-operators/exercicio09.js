@@ -1,0 +1,1 @@
+db.superheroes.find({ 'aspects.hairColor': { $in: ['black', 'Black', 'No Hair'] } })
