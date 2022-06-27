@@ -1,0 +1,1 @@
+db.xmen.updateMany({ occupation: 'Junior Staff', areas: { $exists: false } }, { $set: { areas: ['Outside'] }, $currentDate: { lastUpdate: { $type: 'timestamp' } } })
