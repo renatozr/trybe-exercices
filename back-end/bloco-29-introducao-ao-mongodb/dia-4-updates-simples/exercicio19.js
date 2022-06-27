@@ -1,0 +1,1 @@
+db.xmen.updateMany({ $or: [{ occupation: 'Senior Staff', power: { $gt: 100 } }, { occupation: 'Junior Staff', power: { $gt: 200 } }] }, { $set: { areas: ['Students Room'] }, $currentDate: { lastUpdate: { $type: 'timestamp' } } })
