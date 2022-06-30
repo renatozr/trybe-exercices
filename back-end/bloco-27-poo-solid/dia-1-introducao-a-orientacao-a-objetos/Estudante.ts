@@ -13,4 +13,22 @@ class Estudante {
     this.notasDeProva = notasDeProva;
     this.notasDeTrabalho = notasDeTrabalho
   }
+
+  calculaNotaTotal(): number {
+    let notaTotal = 0;
+
+    this.notasDeProva.forEach((nota: number) => notaTotal += nota);
+    this.notasDeTrabalho.forEach((nota: number) => notaTotal += nota);
+
+    return notaTotal;
+  }
+
+  calculaNotaMedia(): number {
+    const notaTotal = this.calculaNotaTotal();
+    const quantidadeDeNotas = this.notasDeProva.length + this.notasDeTrabalho.length;
+
+    const notaMedia = notaTotal / quantidadeDeNotas;
+
+    return notaMedia;
+  }
 }
