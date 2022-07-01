@@ -4,7 +4,10 @@ class Person {
 
   constructor(name: string, birthDate: Date) {
     if (this.validateName(name)) this.name = name;
+    else throw new Error('Name invalid.');
+
     if (this.validateBirthDate(birthDate)) this.birthDate = birthDate;
+    else throw new Error('Birth date invalid.');
   }
 
   validateName(name: string): boolean {
@@ -24,3 +27,5 @@ class Person {
     return true;
   }
 }
+
+export default Person;

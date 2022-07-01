@@ -1,20 +1,23 @@
+import Person from './Person';
+import { makeid } from './helpers';
+
 type ExamGrades = [number, number, number, number];
 type TaskGrades = [number, number];
 
-class Student {
+class Student extends Person {
   enrollment: string;
-  name: string;
   examGrades: ExamGrades;
   taskGrades: TaskGrades;
 
-  constructor(enrollment: string, name: string, examGrades: ExamGrades, taskGrades: TaskGrades) {
-    this.enrollment = enrollment;
-    this.name = name;
+  constructor(name: string, birthDate: Date, examGrades: ExamGrades, taskGrades: TaskGrades) {
+    super(name, birthDate);
+
+    this.enrollment = this.generateEnrollment();
     this.examGrades = examGrades;
     this.taskGrades = taskGrades
   }
 
-  calculateTotalGrade(): number {
+  sumGrades(): number {
     let totalGrade = 0;
 
     this.examGrades.forEach((grade: number) => totalGrade += grade);
@@ -24,11 +27,17 @@ class Student {
   }
 
   calculateAverageGrade(): number {
-    const totalGrade = this.calculateTotalGrade();
+    const totalGrade = this.sumGrades();
     const gradeQuantity = this.examGrades.length + this.taskGrades.length;
 
     const averageGrade = totalGrade / gradeQuantity;
 
     return averageGrade;
   }
+
+  generateEnrollment(): string {
+    return makeid(16);
+  }
 }
+
+export default Student;
