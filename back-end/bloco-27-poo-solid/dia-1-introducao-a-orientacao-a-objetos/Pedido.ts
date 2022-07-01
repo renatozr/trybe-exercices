@@ -13,4 +13,22 @@ export default class Pedido {
     this.formaDePagamento = formaDePagamento;
     this.descontoEmPercentual = descontoEmPercentual;
   }
+
+  calculaValorTotal(): number {
+    let valorTotal = 0;
+
+    this.itens.forEach((item) => valorTotal += item.preco);
+
+    return valorTotal;
+  }
+
+  calculaValorTotalComDesconto(): number {
+    const valorTotal = this.calculaValorTotal();
+
+    if (!this.descontoEmPercentual) return valorTotal;
+
+    const valorTotalComDesconto = valorTotal - valorTotal * this.descontoEmPercentual / 100;
+
+    return valorTotalComDesconto;
+  }
 }
