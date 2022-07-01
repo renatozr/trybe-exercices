@@ -35,7 +35,7 @@ class Student extends Person {
     return averageGrade;
   }
 
-  generateEnrollment(): string {
+  private generateEnrollment(): string {
     return makeid(16);
   }
 }

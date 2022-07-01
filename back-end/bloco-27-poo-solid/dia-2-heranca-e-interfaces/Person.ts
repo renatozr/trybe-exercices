@@ -10,13 +10,13 @@ class Person {
     else throw new Error('Birth date invalid.');
   }
 
-  validateName(name: string): boolean {
+  private validateName(name: string): boolean {
     if (name.length < 3) return false;
 
     return true;
   }
 
-  validateBirthDate(birthDate: Date): boolean {
+  private validateBirthDate(birthDate: Date): boolean {
     const nowDate = new Date();
 
     if (
@@ -27,5 +27,10 @@ class Person {
     return true;
   }
 }
+
+const joao = new Person('João', new Date('09/03/2001'));
+const laura = new Person('Laura', new Date('02/24/1998'));
+
+console.log(joao, laura);
 
 export default Person;
