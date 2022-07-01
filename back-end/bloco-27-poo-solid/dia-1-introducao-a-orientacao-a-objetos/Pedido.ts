@@ -1,7 +1,7 @@
 import Cliente from "./Cliente";
 import Item from "./Item";
 
-export default class Pedido {
+class Pedido {
   cliente: Cliente;
   itens: Item[];
   formaDePagamento: string;
