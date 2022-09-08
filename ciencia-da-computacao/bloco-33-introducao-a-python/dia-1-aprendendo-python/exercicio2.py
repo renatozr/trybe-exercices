@@ -1,4 +1,4 @@
-def arithmetic_mean(numbers):
+def get_arithmetic_mean(numbers):
     sum, qty = 0, len(numbers)
 
     for number in numbers:
@@ -7,4 +7,4 @@ def arithmetic_mean(numbers):
     return sum / qty
 
 
-print(arithmetic_mean([1, 2, 3]))
+print(get_arithmetic_mean([1, 2, 3]))
