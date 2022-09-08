@@ -1,5 +1,5 @@
-def biggestNumber(*numbers):
+def get_biggest_number(*numbers):
     return max(numbers)
 
 
-print(biggestNumber(1, 2, 1000, 19230145, 10342))
+print(get_biggest_number(1, 2, 1000, 19230145, 10342))
