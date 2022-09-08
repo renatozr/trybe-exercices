@@ -5,4 +5,4 @@ def print_asterisks_square(n):
     print(square)
 
 
-print_asterisks_square(10)
+print_asterisks_square(5)
