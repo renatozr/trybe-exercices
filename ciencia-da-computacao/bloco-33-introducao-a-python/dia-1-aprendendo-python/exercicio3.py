@@ -1,8 +1,8 @@
-def asterisks_square(n):
+def print_asterisks_square(n):
     row = ("*" * n) + "\n"
     square = row * n
 
     print(square)
 
 
-asterisks_square(5)
+print_asterisks_square(10)
