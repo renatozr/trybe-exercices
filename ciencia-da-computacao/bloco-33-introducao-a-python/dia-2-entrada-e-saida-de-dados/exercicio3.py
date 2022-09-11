@@ -1,8 +1,7 @@
 import random
-import json
 
-with open("words.json", mode="r") as file:
-    words = json.load(file)
+with open("words.txt", mode="r") as file:
+    words = file.read().split("\n")
 
 chosen_word = random.choice(words)
 scrambled_word = "".join(random.sample(chosen_word, len(chosen_word)))
