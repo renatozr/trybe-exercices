@@ -7,8 +7,12 @@ def test_fizz_buzz():
 
     assert fizz_buzz([1, 2, 3, 4, 5, 14, 15]) == fizz_buzz_result
 
-    with pytest.raises(ValueError, match="Argumento 'numbers' deve ser uma lista de números"):
+    with pytest.raises(
+        ValueError, match="Argumento 'numbers' deve ser uma lista de números"
+    ):
         fizz_buzz(1)
 
-    with pytest.raises(ValueError, match="Argumento 'numbers' deve ser uma lista de números"):
+    with pytest.raises(
+        ValueError, match="Argumento 'numbers' deve ser uma lista de números"
+    ):
         fizz_buzz(["a", "b"])
