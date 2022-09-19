@@ -70,3 +70,6 @@ class BaralhoInverso(Baralho):
 
 for carta in BaralhoInverso():
     print(carta)
+
+for carta in Baralho():
+    print(carta)
